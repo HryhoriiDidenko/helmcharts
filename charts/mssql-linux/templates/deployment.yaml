@@ -40,7 +40,7 @@ spec:
             ip:
               valueFrom:
                 fieldRef:
-                  fieldPath: status.podIP
+                  fieldPath: {{ status.podIP }}
       {{- if .Values.schedulerName }}
       schedulerName: "{{ .Values.schedulerName }}"
       {{- end }}
