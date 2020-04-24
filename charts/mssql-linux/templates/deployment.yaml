@@ -34,13 +34,6 @@ spec:
 {{- end }}
     spec:
       hostname: sqlserver
-      hostAliases:
-        - hostnames:
-          - "sqlserver"
-          ip:
-            valueFrom:
-              fieldRef:
-                fieldPath: status.podIP
       {{- if .Values.schedulerName }}
       schedulerName: "{{ .Values.schedulerName }}"
       {{- end }}
